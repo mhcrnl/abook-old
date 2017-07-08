@@ -14,19 +14,57 @@ typedef struct node {
 } entry;
 
 entry * book[26];
-
+/**
+    1.
+*/
 entry * insert_front(entry * a, char * name, char * address);
+/**
+    2.
+*/
 entry * insert_order(entry * a, char * name, char * address);
+/**
+    3.
+*/
 entry * find_name(entry * a, char * name);
+/**
+    4.
+*/
 entry * remove_name(entry * a, char * name);
+/**
+    5.
+*/
 entry * free_list(entry * a);
+/**
+    6.
+*/
 void print_list(entry * a);
+/**
+    7.
+*/
 void add_entry(char * name, char * address);
+/**
+    8
+*/
 void search_entry(char * name);
+/**
+    9.
+*/
 void print_letter(char letter);
+/**
+    10.
+*/
 void print_book();
+/**
+    11.
+*/
 void delete_name(char * name);
+/**
+    12.
+*/
 void clear_book();
+/**
+    13.
+*/
 int get_letter(char a);
 
 int fd,b,i,j;
@@ -69,7 +107,7 @@ int main(){
   /* printf("\n**Adding Me,Mike,Briana**\n");
      add_entry("Me", "sgreco94@verizon.net");
      add_entry("Mike", "mike@website.com");
-     add_entry("Briana", "blg820@aol.com"); 
+     add_entry("Briana", "blg820@aol.com");
      printf("**Printing entire book**\n");
      print_book();
      printf("**Printing letter M**\n");
@@ -94,7 +132,7 @@ int main(){
      print_book();
   */
   /*LIST TESTS
-    
+
     entry * a;
     a = NULL;
     printf("**Testing List Functions**\n");
@@ -146,7 +184,7 @@ void search_entry(char * n){
 
 void add_entry(char * n, char * a){
   int i;
-  i = get_letter(n[0]);  
+  i = get_letter(n[0]);
   book[i] = insert_order(book[i],n,a);
 }
 
@@ -219,7 +257,7 @@ entry * free_list(entry * a){
   }
   return a;
 }
-    
+
 
 entry * find_name(entry * a, char * n){
   while (a){
